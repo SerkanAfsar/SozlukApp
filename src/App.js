@@ -28,6 +28,42 @@ function App() {
     setVeriler(data);
   }
 
+
+  const deneme = [
+    {
+      name: "Serkan",
+      surname: "Afşar",
+      product: {
+        category: "Elektronik",
+        urun: "Bilgisayar"
+      }
+    },
+    {
+      name: "Selin",
+      surname: "Afşar 1",
+      product: {
+        category: "deneme 2",
+        urun: "deneme 3"
+      }
+    }
+  ];
+
+  console.log(JSON.stringify(deneme, (key, value) => {
+    if (key == "product") {
+      return `Merhaba Deneme ${value.category}`
+    }
+    return value;
+  }, 1));
+
+
+  console.log("Test 2 ", JSON.stringify(deneme, (key, value) => {
+    if (key == "product") {
+      return `Test Deneme 123 ${value.urun}`
+    }
+    return value;
+  }, 2));
+
+
   return (
     <div className="App">
       <Diller handleOnChange={handleOnChange} {...{ kayitliDiller }} />

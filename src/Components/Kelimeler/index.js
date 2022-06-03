@@ -63,10 +63,10 @@ const Kelimeler = ({ kayitliDiller, veriler, onDataChanged }) => {
                     <Modal.Footer>
                         <Button variant="secondary" onClick={() => setShow(false)}>
                             Kapat
-                     </Button>
+                        </Button>
                         <Button variant="primary" type="submit" >
                             Kaydet
-                    </Button>
+                        </Button>
                     </Modal.Footer>
                 </Form>
             </Modal>
